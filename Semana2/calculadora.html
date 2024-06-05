@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <title> Calculadora </title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <h1> Calculadora Simples </h1>
+
+            <div class="row">
+            <span>Número 1:</span>
+            <input id="numero1" type="number">
+            </div>
+
+            <div class="row">
+            <span>Número 2:</span>
+            <input id="numero2" type="number">
+            </div>
+
+            <button id="btnCalcular" onclick="calcular()" class="btn">Calcular</button>
+            <span id="txtResultado">Resultado: </span>
+            <button id="btnCalcular" onclick="validar()" class="btn">Validar</button>
+        
+       <script>
+
+        const num1 = document.getElementById('numero1')
+        const num2 = document.getElementById('numero2')
+        const txtResultado = document.getElementById('txtResultado')
+
+            function calcular(){
+                console.log('calcula algo')
+                const resultado = parseInt(num1.value) + parseInt(num2.value)
+                txtResultado.innerText = `Resultado: ${resultado}`
+                console.log(resultado)
+                }
+       </script>
+        
+        </div>
+
+    
+    </body>
+    </html>

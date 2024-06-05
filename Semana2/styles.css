@@ -1,0 +1,30 @@
+* {
+  margin-bottom: 150px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+  display: flex; 
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  max-width: 90px;
+}
+
+
+
+/* display flex - um item embaixo do outro 
+flex-direction - row - na mesma linha,... column - mesma coluna
+* para todos os atributos da tela 
+
+*/

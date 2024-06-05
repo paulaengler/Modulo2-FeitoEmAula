@@ -1,0 +1,106 @@
+/* padrao para todos os elementos, posteriormente pode colocar uma nova configuraçao
+para algo especifico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* configuração padrao de todo html */
+html {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 1)
+}
+
+p {
+    color: red;
+}
+
+#box {
+    width: 250px;
+    height: 250px;
+    background: gray;
+}
+
+.container {
+    width: 250px;
+}
+
+/* especificou que é o p do container - todos os p*/
+.container p {
+    color: white
+}
+
+/* especificou que é o p do container - só pega do primeiro nivel */
+.container > p {
+    color: black;
+    font-size: 2rem; 
+}
+/* 1rem-16px ... 2rem-32px */
+
+img[src] {
+    border:5px solid red;
+}
+
+input[type="text"] {
+    border: 10px solid green
+}
+
+/* quando o input não esta ativo, altera o cursor do mouse */
+input:disabled {
+    cursor: not-allowed
+}
+
+.form-control {
+    height: 56px;
+    min-width: 500px;
+    border: 1px solid gray;
+    outline: 0;
+    padding: 16px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* qd clica na caixa, muda a cor de fora, o foco */
+.form-control:focus {
+    border-color: yellow;
+}
+
+/* evento de quando passa o mouse em cima do elemento, muda a cor */
+.form-control:hover {
+    border-color: green;
+}
+
+/* mudar o cursor para ver que é algo clicável , por padrao mantem a flecha e agora
+qd passa o mouse em cima, fica uma maozinha */
+button {
+    cursor: pointer;
+}
+
+.button {
+    height: 56px;
+    padding: 16px;
+    background: black;
+    border: none;
+    border-radius: 5px;
+    transition: all 3s ease;
+}   
+
+/* se botao nao estiver desabilitado, aplica o hover */
+.button:not(:disabled):hover {
+    filter: opacity(0.5);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Centralizar div
+
+margin: 0 auto 
+ (cima) - esquerda e direita, auto 
+
+*/
