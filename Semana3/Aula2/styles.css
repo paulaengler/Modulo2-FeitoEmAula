@@ -1,0 +1,27 @@
+nav {
+    display: flex;
+    gap: 16px; 
+    text-decoration: none;
+    filter: brightness(0.6);
+    transition: color 0.2s ease; 
+    color: #3d9470;
+}
+
+/* 
+gap - espaçamento entre os elementos 
+tex-decoration - none - remove sublinhado por exemplo
+filter - claridade da cor - no hover - cursor - altera a cor qd passar o cursor
+transition - color - qd passar o cursor, muda a cor, leva aquele tempo. pra entrada - no hover
+- qd quiser na entrada e saida, coloca no elemento mesmo e não no hover
+border - 2px solid red - para ver onde fica o componente da tag
+margin: 0 auto
+margim-bottom: 2rem;
+
+só a tag, não precisa do ponto antes do nome, o ponto vai para classes
+
+
+*/
+
+
+
+
