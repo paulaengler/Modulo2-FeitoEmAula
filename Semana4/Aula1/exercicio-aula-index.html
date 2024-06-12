@@ -1,0 +1,70 @@
+<!-- 
+Exercício:
+
+Objetivo: Crie uma pequena aplicação web onde o usuário pode alterar a aparência
+e os atributos de um parágrafo usando botões. O objetivo é praticar a manipulação
+de atributos e estilos com JavaScript.
+● Praticar a utilização de setAttribute, getAttribute e removeAttribute.
+● Modificar estilos usando a propriedade style
+● Adicionar e remover classes de elementos
+
+Etapas:
+
+● Crie um arquivo index.html.
+● Adicione um parágrafo com um texto inicial.
+● Crie três botões, para mudar a cor do texto, adicionar/remover uma classe, e
+um para adicionar/remover um atributo personalizado
+● Adicionar evento de ‘onclick’ nos botões e conectar com funções no JS.
+● Para cada função, realizar a manipulação de acordo com o objetivo do botão.
+● Construir estilizações para que seja visualizada cada modificação feita no JS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - aula </title>
+</head>
+<body>
+    
+    <style>
+       #paragrafo {
+        color:red;
+       }
+
+       .dark {
+        background-color: black;
+        color: white;
+       }
+    </style>
+
+    <h1>Manipulação de um parágrafo</h1>
+    <p id="paragrafo" class="dark">Este é um parágrafo que será modificado</p>
+    <button id="cor" onclick="mudarCor()">Mudar Cor do Texto</button>
+    <button id="classe" onclick="mudarClasse()">Adicionar/remover uma classe</button>
+    <button id="atributo" onclick="mudarAtributo()">Adicionar/remover um atributo personalizado</button>
+    </div>
+
+    <script>
+        
+        function mudarCor(){
+            let novaCor = document.getElementById("cor").addEventListener("click", mudarCor)
+            const corAtual = paragrafo.style.color;
+            paragrafo.style.color = corAtual === "blue" ? "red" : "blue";
+        }
+
+        function mudarClasse(){
+            let classeAlterada = document.getElementById('classe').addEventListener("click", mudarClasse)
+            paragrafo.classList.remove('dark')
+        }
+
+        function mudarAtributo(){
+            let atributoAlterado = document.getElementById('atributo').addEventListener("click", mudarAtributo)
+            const atributoAtual = 
+        }
+    </script>
+
+    </body>
+</html>
+
