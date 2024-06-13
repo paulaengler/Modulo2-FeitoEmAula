@@ -21,50 +21,114 @@ um para adicionar/remover um atributo personalizado
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio - aula </title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio - aula</title>
+
     <style>
-       #paragrafo {
-        color:red;
-       }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
 
-       .dark {
+      .container {
+        text-align: center;
+      }
+
+      .default-paragraph {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .dark-mode{
         background-color: black;
-        color: white;
-       }
-    </style>
+        color: azure;
+      }
 
-    <h1>Manipulação de um parágrafo</h1>
-    <p id="paragrafo" class="dark">Este é um parágrafo que será modificado</p>
-    <button id="cor" onclick="mudarCor()">Mudar Cor do Texto</button>
-    <button id="classe" onclick="mudarClasse()">Adicionar/remover uma classe</button>
-    <button id="atributo" onclick="mudarAtributo()">Adicionar/remover um atributo personalizado</button>
+     </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Manipulação de um parágrafo</h1>
+      <p id="paragraph" class="default-paragraph">
+        Este é um parágrafo que será modificado
+      </p>
+
+      <div classs="controls">
+        <button id="btn-cor" onclick="mudarCor()">
+            Mudar Cor do Texto</button>
+        <button id="btn-classe" onclick="mudarClasse()">
+            Adicionar/remover classe
+        </button>
+        <button id="btn-atributo" onclick="mudarAtributo()">
+            Adicionar/remover atributo
+        </button>
+      </div>
     </div>
 
+    
     <script>
-        
-        function mudarCor(){
+      function mudarCor() {
+        const paragrafo = document.getElementById('paragraph')
+        paragrafo.style.color = 'red'
+      }
+
+      function mudarClasse() {
+        const paragrafo = document.getElementById('paragraph')
+        paragrafo.classList.toggle('dark-mode')
+      }
+
+      function mudarAtributo() {
+        const paragrafo = document.getElementById('paragraph')
+        paragrafo.setAttribute('aria-label', 'Novo parágrafo')
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+**BUSCAR PRIMEIRO NO GETELEMENTBYID PARA BUSCAR SEMPRE A ESTILIZAÇÃO ORIGINAL PRIMEIRO
+**sempre chamar de novo o elemento , para depois manipular
+
+function mudarCor(){
+            const paragrafo = document.getElementById('paragraph')
+            paragrafo.style.color = 'red'
+            //style.color = 'red'
             let novaCor = document.getElementById("cor").addEventListener("click", mudarCor)
             const corAtual = paragrafo.style.color;
             paragrafo.style.color = corAtual === "blue" ? "red" : "blue";
         }
 
         function mudarClasse(){
+            const paragrafo = document.getElementById('paragrafh')
+            paragrafo.classList.toggle('dark-mode')
+            //classList.add(.dark)
             let classeAlterada = document.getElementById('classe').addEventListener("click", mudarClasse)
             paragrafo.classList.remove('dark')
         }
 
         function mudarAtributo(){
+            const paragrafo = document.getElementById('paragrafh')
+            paragrafo.setAttribute.('')
+
             let atributoAlterado = document.getElementById('atributo').addEventListener("click", mudarAtributo)
             const atributoAtual = 
-        }
-    </script>
-
-    </body>
-</html>
-
+        } -->

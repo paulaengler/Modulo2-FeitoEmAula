@@ -140,3 +140,111 @@ console.log(document.documentElement.parentNode === document);  // true
 console.log(document.documentElement.parentElement === document);  // false
 
 
+
+**NOVA PLAYLIST**
+
+document.getElementsByName('nome do name')[2].innerHTML = "novo texto .... ";
+
+document.getElementsClassName('nome da classe').innerText = " novo texto ... ";
+
+document.getElementsByTagName('h1')[1].innerHTML = "elemento posição 1 .. novo texto..";
+
+h1, p, div - tag name
+
+//querySelector
+
+document.querySelector('#id').innerHTML = "<b>conteudo novo</b>"
+id é #
+
+document.querySelector('p').innerHTML = "<b>conteudo do primeiro p </b>"
+tag 
+
+document.querySelector('.nomedaclasse').innerText= "conteudo da classe"
+classe é . (ponto)
+
+//querySelectorAll
+
+document.querySelectorAll('#id')[2].innerText= "novo texto na posição 2 - terceiro item "
+
+
+hasAttribute- pergunta se tem algum atributo
+
+document.getElementById('idQualquer').hasAttribute('class')
+traz o resultado: true ou false
+
+document.querySelector('.classe').hasAttribute('id')
+true ou false
+
+getAttribute - pergunta se tem e traz o valor que esta dentro da classe
+
+var atributo = document.getElementById('idQualquer').getAttribute('class')
+
+setAttribute - altera
+var atributo = document.getElementById('idQualquer');
+
+aplicando um estilo direto
+
+atributo.setAttribute('style', 'background: red')
+
+
+scrollTo
+leva para algum lugar na página 
+
+function topo(){
+    window.scrollTo ({
+        top: 0,
+        left:0,
+        behavior:'auto',
+    })
+}
+
+createElement
+
+-- Criar um elemento <li> e um nó de texto
+var elemento = document.createElement('li');
+
+--criar um nó do texto
+var texto = document.createTextNode('item da lista adicionado')
+
+elemento.appendChild(texto)
+
+--recuperando o elemento lista e anexado o elemento li ao final da lista
+
+var lista = document.getElementByTagName('ul')[0]
+lista.appendChild(elemento)
+
+
+
+insertBefore
+<ul>
+    <li> item 1 </li>
+    <li> item 2 </li>
+    <li> item 3 </li>
+</ul>
+
+var lista = document.getElementByTagName('ul')[0];
+var itens = lista.getElementByTagName('li')
+criando o elemento
+var elemento = document.createElement('li')
+elemento.textContent = "outro item"
+inserindo um valor em posição específica
+lista.insertBefore(elemento, itens[3])
+
+
+
+removeChild
+lista.removeChild(itens[2])
+
+
+
+
+
+criando a tag p
+var novoParagrafo = document.createElement("p")
+
+criando o texto para inserir na tag p 
+var texto = document.createTextNode("este é o conteudo do novo paragrafo")
+
+novoParagrafo.appendChild(texto)
+
+console.log(novoParagrafo)
