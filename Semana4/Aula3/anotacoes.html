@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn-clique" onclick=botaoClicado()> Clique aqui </button>
+
+    
+    <form onsubmit="enviarCadastro(event)">
+        <input type="text" placeholder="Informe o seu nome">
+        <button type="submit"> Enviar </button>
+    </form>
+
+    <script>
+        function botaoClicado () {
+        }
+
+        function enviarCadastro (event){
+            event.preventDefault()
+        }
+    </script>
+
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const newElement = document.createElement('p');
+        newElement.textContent = 'Este é o novo parágrafo';
+        newElement.className = 'color-red';
+        newElement.setAttribute('id', 'meu-paragrafo');
+
+        //Cria esse elemento - aparece no console - mas não foi passado aonde ele sera inserido 
+        // na tela
+        // <p id='meu-paragrafo' class='color-red'> Este é o novo parágrafo </p>
+
+        const newElement = document.createElement('div');
+        const nomeProduto = 'celular';
+        const preco = 'R$4000';
+        newElement.innerHTML =  `
+                                <span> ${nomeProduto} </span>
+                                <span> ${preco} <span>
+                                `
+
+        //createElement fica só no javascript por enquanto
+        //ainda não é adicionado para visualização
+
+
+        //adicionando o novo elemento como filho do body
+        const newElement = document.createElement('p');
+        newElement.textContent = 'Este é o novo parágrafo';
+        newElement.className = 'color-red';
+        newElement.setAttribute('id', 'meu-paragrafo');
+        document.body.appendChild(newElement);
+
+        // inserindo itens numa lista 
+                                
+       <ul id="list"></ul>
+
+        const list = document.getElementById('list')
+        const items = ['item 1', 'item 2', 'item 3']
+        items.forEach(item => {
+            const li = document.createElement('li')
+            li.textContent = item
+            list.appendChild(li)
+        })
+
+
+    </script>
+</body>
+</html>
+
+

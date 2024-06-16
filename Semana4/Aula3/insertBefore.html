@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Insert Before</h1>
+
+    <style>
+        .lista {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .q { 
+            width: 80px;
+            height: 80px;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .orange {
+            background: orange;
+        }
+
+        .brown {
+            background: brown;
+        }
+
+    </style>
+
+    <div id= "lista" class="lista">
+        <div id="q1" class="q red"></div>
+        <div id="q2" class="q blue"></div>
+        <div id="q3" class="q orange"></div>
+    </div>
+
+<script>
+    const lista = document.getElementById('lista')
+    const novoQuadrado = document.createElement('div')
+    novoQuadrado.classList = 'q brown'
+    novoQuadrado.innerHTML = `<p> Adicionado </p>`
+    //lista.appendChild(novoQuadrado) - inserir o marrom no final - como filho no final
+    
+    const referencia = document.getElementById('q2')
+    lista.insertBefore(novoQuadrado, referencia)
+    //adicionou antes do referencia, que é o azul
+    //se nao encontrar o referencia ou nao existir, nao da erro..joga pro final 
+
+</script>
+
+</body>
+</html>
