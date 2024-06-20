@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #e6e9ff;
+    color: #44546a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .clock {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-size: 6rem; /** 96px */
+    gap: 2rem;
+  }
+  
+  .hour,
+  .minutes {
+    padding: 1rem;
+    background: #fff;
+    border-radius: 5px;
+  }
