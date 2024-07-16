@@ -91,3 +91,23 @@ main.jsx
 no console, aparece 2x renderizou, apesar de só ter rodado 1x
 se comentar no main, aparece só uma vez
 
+****AULA2***
+
+https://github.com/FuturoDEV-Trip/MS2S07
+
+useRef - seu retorno é um objeto com uma propriedade .current
+
+componentes controlados
+
+comentário whats-useState renderiza a toda mudança...  e isso é positivo e negativo dependendo de pra quer for usar...
+captar a informação com referências não atualiza a cada mudança...  pega a informação apenas ao final... exatamente comoo faziamos antes com o document.querySelector
+
+
+Aula3-
+
+https://getbootstrap.com/
+npm install bootstrap@5.3.3
+import 'bootstrap/dist/css/bootstrap.min.css'
+importação no arquivo main.jsx
+
+
