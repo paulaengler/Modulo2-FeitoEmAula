@@ -34,5 +34,12 @@ http://localhost:3000/users
 sempre rodar o projeto react: npm run dev e rodar json-server --watch db.json
 vai usar o pacote json-server e vai ler o tempo todo o arquivo db.json, gerando uma api fake
 
+Instalar
+npm i react-router-dom
 
+npm run dev
+vai trazer o localhost
+copiar no navegador
+endereço do localhost/login
+da rota criada
 
