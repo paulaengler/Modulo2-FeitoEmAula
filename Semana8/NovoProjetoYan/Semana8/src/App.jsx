@@ -17,6 +17,9 @@ function loginRedirect(componente){
   return componente
 }
 
+// console.log(`loginRedirect::isAuthenticated::${isAuthenticated}`)
+// código acima ---- se tiver autenticado, vai pra home -- se não tiver, vai pra login 
+
 return (
       <>
    
@@ -28,6 +31,13 @@ return (
 
       {/* <Route path='/login' Component={Signin}/>
       <Route path='/cadastro' Component={Signup}/> */}
+
+{/* ternário
+{condição ? seVerdade : falso}
+usuario autenticado?
+se sim, rotas
+se não, outras rotas */}
+
 
         {isAuthenticated ? 
         (

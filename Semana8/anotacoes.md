@@ -185,3 +185,98 @@ function welcome(){
 
  componentes-header,footer,main
  pages- login, home, cadastro
+
+
+
+ https://getbootstrap.com/docs/5.3/layout/breakpoints/#available-breakpoints
+
+
+**** Aula 3
+
+input e imagem: 
+
+img {
+position: absolute;
+left: 0;
+top: 0;
+}
+colocar em uma div, input + imagem
+transparencia zero
+
+
+mexer só no app.jsx - pode apagar o return se tiver algum erro
+
+template - Yan - arquivo inicial
+https://github.com/yanestevesufjf/boilerplate_reactjs
+
+
+pode haver diferença de design , para rotas nao protegidas, publica (login, esqueci a senha) e parte protegida (com sidebar, header, footer)
+
+exercicio 2  e 7 do trello
+https://gist.github.com/yanestevesufjf/8632ab4ccbb94fae1fa6969b12eaf04b
+
+// exercicio 2 e 7
+import { useNavigate } from 'react-router-dom';
+
+function Login() {
+
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+
+    const navigate = useNavigate();  
+
+    function handleSubmit(e) {
+        if (email === 'admin@admin.com' && senha === 'admin123') {
+            // redireciona para algum lugar
+            navigate('/home')
+        }
+
+        alert('Email e/ou senha incorretos')
+    }
+    
+    return (
+        <>
+            <form onSubmit={handleSubmit}>
+                <input type="text" />
+                <input type="password" />
+                <button>Entrar</button>
+            </form>
+        </>
+    )
+}
+
+export default Login
+
+
+- useNavigate
+é um hook
+
+
+https://www.langchain.com/
+
+
+Exercicio em aula
+https://www.figma.com/design/0Y0SutqjC0IrAXxYWAuWkO/SmartFarm-Intelbras?node-id=38-390&t=uu6KYa1It1V36a7i-1
+component e nao em pages - sidebar nao vai ter uma rota 
+
+
+20:50
+https://github.com/FuturoDEV-Nature/react_boilerplate
+
+exercicio5
+app.jsx
+pasta routes - routes.jsx
+
+exercicio 2 - signin.jsx
+
+exercicio 6 - botao entrar - link pra login
+
+exercicio 4 - cards de componentes que se repetem
+categoriaProduto.jsx e home.jsx
+home.css
+21:25
+
+modal - video
+
+
+https://www.linkedin.com/in/yanesteves/

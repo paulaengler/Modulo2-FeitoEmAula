@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
+import Sidebar from "../components/Sidebar/Sidebar"
+import '../components/Sidebar/sidebar.css'
 
 function Home() {
     return (
         <>
+            <Sidebar></Sidebar>
             <h1>Home</h1>
             <Link to='/bicicletas'>Bicicletas</Link>
            
